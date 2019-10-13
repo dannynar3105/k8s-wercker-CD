@@ -29,7 +29,7 @@ deploy-to-oke:
         name: create deployment
         server: $KUBERNETES_MASTER
         insecure-skip-tls-verify: true
-        token: $KUBERNETES_TOKEN
+        username: $KUBERNETES_USERNAME
         
         
         command: create -f $WERCKER_ROOT/kubernetes-deployment.yml 
