@@ -4,6 +4,7 @@
 
 apiVersion: extensions/v1beta1
 kind: Deployment
+namespace: demo
 metadata:
   name: rest-simpleapp
   labels:
