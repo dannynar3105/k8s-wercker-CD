@@ -31,7 +31,7 @@ deploy-to-oke:
     - kubectl:
         name: create namespace    
         server: $KUBERNETES_MASTER
-        token: $KUBERNTES_TOKEN
+        token: $KUBERNETES_TOKEN
         insecure-skip-tls-verify: true
         command: create namespace $WERCKER_APPLICATION_OWNER_NAME
         
