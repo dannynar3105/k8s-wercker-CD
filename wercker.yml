@@ -34,6 +34,8 @@ deploy-to-oke:
         name: create deployment
         server: $KUBERNETES_MASTER
         token: $KUBERNETES_TOKEN
+        username: $KUBERNETES_USERNAME
+        password: $KUBERNETES_PASSWORD
         
         command: create -f $WERCKER_ROOT/kubernetes-deployment.yml 
         
