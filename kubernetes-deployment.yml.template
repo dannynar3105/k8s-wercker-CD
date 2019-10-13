@@ -1,5 +1,6 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
+namespace: demo
 metadata:
   name: rest-simpleapp
   labels:
@@ -27,6 +28,7 @@ spec:
 ---
 apiVersion: v1
 kind: Service
+namespace: demo
 metadata:
   name: rest-simpleapp-svc
 spec:
