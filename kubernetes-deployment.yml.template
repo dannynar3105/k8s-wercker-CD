@@ -1,9 +1,13 @@
+#
+# Copyright (c) 2017 Oracle and/or its affiliates. All rights reserved.
+#
+
 apiVersion: extensions/v1beta1
 kind: Deployment
 
 metadata:
   name: rest-simpleapp
-  namespace: demo
+  
   labels:
     run: rest-simpleapp
 spec:
@@ -29,9 +33,9 @@ spec:
 ---
 apiVersion: v1
 kind: Service
-namespace: demo
 metadata:
   name: rest-simpleapp-svc
+ 
 spec:
   selector:
     run: rest-simpleapp
