@@ -23,16 +23,7 @@ deploy-to-oke:
         code: cat kubernetes-deployment.yml
     
     
-    - kubectl:
-        name: create TLS secret
-        server: $KUBERNETES_MASTER
-        
-        username: $KUBERNETES_USERNAME
-      
-        insecure-skip-tls-verify: true
-        command: create secret tls tls-secret --key $WERCKER_ROOT/tls.key --cert $WERCKER_ROOT/tls.crt --namespace=$WERCKER_APPLICATION_OWNER_NAME
-                    
-    
+   
              
     - kubectl:
         name: create deployment
