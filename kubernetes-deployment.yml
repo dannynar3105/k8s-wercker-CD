@@ -21,14 +21,12 @@ spec:
         run: rest-simpleapp
     spec:
       containers:
-      - image: wcr.io/$WERCKER_APPLICATION_OWNER_NAME/$WERCKER_APPLICATION_NAME:$WERCKER_GIT_BRANCH-$WERCKER_GIT_COMMIT
+      - image: nginx
         imagePullPolicy: Always
         name: rest-simpleapp
         ports:
         - containerPort: 3000
           protocol: TCP
-      imagePullSecrets:
-      - name: wrelease
       restartPolicy: Always
 ---
 apiVersion: v1
@@ -41,4 +39,4 @@ spec:
   ports:
     - port: 8088
       targetPort: 3000
-  type: ClusterIP
+  type: NodePort
